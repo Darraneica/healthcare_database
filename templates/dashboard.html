@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Healthcare Database</title>
+    <link rel="stylesheet" href="static/dashboard.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Healthcare DB</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('dashboard') }}" class="nav-link">Home</a></li>
+                    <li><a href="{{ url_for('patients') }}" class="nav-link">Cases</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <section class="dashboard-stats">
+            <h2>Dashboard</h2>
+            <div class="stat-card">
+                <h3>Total Patients</h3>
+                <p>{{ total_patients }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Latest Registered Patient</h3>
+                <p>{{ latest_patient_name }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Upcoming Appointments</h3>
+                <p>{{ upcoming_appointments }}</p>
+            </div>
+
+            <a href="{{ url_for('home') }}" class="btn">Register New Patient</a>
+        </section>
+    </main>
+
+    <!-- Footer Section (optional) -->
+    <footer>
+        <p>&copy; 2025 Healthcare DB. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light Gray Background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center content vertically */
+}
+
+/* Login Container */
+.login-container {
+    text-align: center;
+    background-color: #ffffff; /* White Background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+    width: 90%;
+    max-width: 400px; /* Limit container width */
+}
+
+.login-container h2 {
+    color: #1e2a47; /* Navy Blue */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    color: #2c3e50; /* Darker Gray-Blue */
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: #3498db; /* Light Blue */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Darker Blue on Hover */
+    transform: scale(1.05); /* Slight Enlargement */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #1e2a47; /* Navy Blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Keeps the footer at the bottom */
+    bottom: 0;
+    width: 100%; /* Ensures it spans the full width */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}

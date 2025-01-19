@@ -1,0 +1,42 @@
+[
+    {
+        "id": "c8dccba0-6041-42e4-87e7-20daa045e733",
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "dob": "1998-12-14",
+        "ssn": "111-11-1111",
+        "insurance": "AETNA",
+        "medical_history": "",
+        "billing_history": ""
+    },
+    {
+        "id": "1210984",
+        "first_name": "John",
+        "last_name": "Doe",
+        "dob": "1955-12-08",
+        "ssn": "111-11-1111",
+        "insurance": "BCBS",
+        "medical_history": "N/A",
+        "billing_history": "N/A"
+    },
+    {
+        "id": "4211376",
+        "first_name": "Shaun",
+        "last_name": "Michaels",
+        "dob": "1992-01-23",
+        "ssn": "111-11-1111",
+        "insurance": "BCBS",
+        "medical_history": "N.A",
+        "billing_history": "N.A"
+    },
+    {
+        "id": "4545",
+        "first_name": "Stanley",
+        "last_name": "Steven",
+        "dob": "1966-09-03",
+        "ssn": "111-11-1111",
+        "insurance": "AETNA",
+        "medical_history": "N/A",
+        "billing_history": "N/A"
+    }
+]

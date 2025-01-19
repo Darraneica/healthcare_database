@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light Gray Background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center content vertically */
+}
+
+/* Intro Container Styles */
+.intro-container {
+    text-align: center;
+    background-color: #ffffff; /* White Background for the container */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle Shadow for depth */
+    width: 80%;
+    max-width: 600px; /* Limit container width */
+}
+
+.intro-container h1 {
+    color: #1e2a47; /* Navy Blue */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro-container p {
+    color: #2c3e50; /* Darker Gray-Blue */
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #3498db; /* Light Blue */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}

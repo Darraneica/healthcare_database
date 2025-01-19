@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Patients - Algorithm</title>
+    <link rel="stylesheet" href="static/patient.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Algorithm</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <div class="search-section">
+            <h2>Search for Existing Patients</h2>
+            <form method="GET" action="/patients" class="search-form">
+                <div class="search-bar">
+                    <input type="text" id="search_query" name="search_query" placeholder="Enter patient name or ID" class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+
+            {% if patients %}
+                <h3>Search Results</h3>
+                <div class="results-summary">
+                    <p><strong>{{ patients|length }} result(s) found.</strong></p>
+                </div>
+                <div class="patients-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Name</th>
+                                <th>Date Processed</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for patient in patients %}
+                                <tr>
+                                    <td>{{ patient['id'] }}</td>
+                                    <td>
+                                        <a href="/patient/{{ patient['id'] }}">
+                                            {{ patient['first_name'] }} {{ patient['last_name'] }}
+                                        </a>
+                                    </td>
+                                    <td>{{ patient['date_processed'] }}</td>
+                                    <td>
+                                        <a href="/patient/{{ patient['id'] }}" class="view-btn">
+                                            <i class="fas fa-eye"></i> View
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p>No patients found for the search query. Please try again.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Healthcare Database System | All rights reserved</p>
+    </footer>
+
+</body>
+</html>

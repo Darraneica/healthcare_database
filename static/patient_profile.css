@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #1e2a47; /* Navy Blue */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Notification Message for Small Screen */
+.resize-message {
+    display: none; /* Hidden by default */
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* Main Content Section */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Default single column */
+    grid-gap: 20px;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Search Bar Section */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #2980b9;
+}
+
+/* Patients List Table */
+.patients-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    table-layout: auto;
+}
+
+.patients-list th,
+.patients-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.patients-list th {
+    background-color: #2c3e50;
+    color: white;
+    text-transform: uppercase;
+}
+
+.patients-list tr:hover {
+    background-color: #ecf0f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Table wrapper to make it scrollable */
+.patients-list table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1e2a47; /* Navy Blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resize-message {
+        display: block; /* Show the message */
+    }
+
+    .patients-list table {
+        display: none; /* Hide the table */
+    }
+
+    .main-content {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    .patients-list table {
+        font-size: 14px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}

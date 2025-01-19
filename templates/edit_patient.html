@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Patient</title>
+</head>
+<body>
+    <h1>Edit Patient Details</h1>
+    
+    {% if patient %}
+    <form method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" value="{{ patient.first_name }}" required>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" value="{{ patient.last_name }}" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" value="{{ patient.dob }}" required>
+        
+        <label for="ssn">SSN:</label>
+        <input type="text" name="ssn" value="{{ patient.ssn }}" required>
+        
+        <label for="insurance">Insurance:</label>
+        <input type="text" name="insurance" value="{{ patient.insurance }}" required>
+        
+        <label for="medical_history">Medical History:</label>
+        <textarea name="medical_history" required>{{ patient.medical_history }}</textarea>
+        
+        <label for="billing_history">Billing History:</label>
+        <textarea name="billing_history" required>{{ patient.billing_history }}</textarea>
+        
+        <button type="submit">Update Patient</button>
+    </form>
+    {% else %}
+    <p>Patient not found.</p>
+    {% endif %}
+</body>
+</html>
