@@ -146,7 +146,6 @@ def patients():
 
     return render_template('patients.html', patients=patients, search_query=search_query)
 
-
 @app.route('/patient/<patient_id>/edit', methods=['GET', 'POST'])
 def edit_patient(patient_id):
     """Edit details of a specific patient."""
@@ -166,16 +165,12 @@ def edit_patient(patient_id):
 
     return render_template('edit_patient.html', patient=patient)
 
-
 def calculate_age(dob):
     """Calculate age from date of birth."""
     from datetime import datetime
     birth_date = datetime.strptime(dob, '%Y-%m-%d')
     today = datetime.today()
     return today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
-
-    
-    return render_template('patients.html', patients=patients, search_query=search_query)
 
 @app.route('/patient/<patient_id>', methods=['GET', 'POST'])
 def patient_profile(patient_id):
@@ -255,4 +250,4 @@ def save_appointments_data(data):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
